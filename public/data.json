@@ -1,0 +1,64 @@
+{
+  "contact": {
+    "firstName": "Kenji",
+    "lastName": "Fukuda",
+    "titles": ["Full Stack Developer"],
+    "phone": "+1 360 388 3068",
+    "email": "the",
+    "location": "",
+    "birthday": ""
+  },
+  "socials": {
+    "linkedin": "",
+    "github": "https://github.com/Sirius198",
+    "behance": "",
+    "leetcode": "https://leetcode.com/kenjifukuda"
+  },
+  "resume": {
+    "education": [
+      {
+        "date": "",
+        "certification": "",
+        "school": "",
+        "location": ""
+      }
+    ],
+    "experience": [
+      {
+        "date": "",
+        "company": "",
+        "title": "",
+        "description": "",
+        "url": ""
+      }
+    ],
+    "awards": [
+      {
+        "date": "",
+        "title": "",
+        "description": ""
+      }
+    ],
+    "skills": [
+      {
+        "name": "HTML/CSS/JavaScript",
+        "proficient": 99
+      },
+      {
+        "name": "TypeScript",
+        "proficient": 99
+      },
+      {
+        "name": "React",
+        "proficient": 99
+      },
+      {
+        "name": "Vue.js",
+        "proficient": 99
+      }
+    ],
+    "knowledges": ["Kafka", "Time Management"]
+  },
+  "works": [],
+  "blogs": []
+}
