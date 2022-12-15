@@ -25,7 +25,7 @@ export default function () {
     () =>
       navList.map((nav) => {
         const clsName = classNames(
-          "rounded-md  cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center  transition-all duration-300 ease-in-out from-[#FA5252] to-[#DD2476] ",
+          "rounded-md cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex text-xtiny py-2.5 md:px-4 xl:px-5 items-center  transition-all duration-300 ease-in-out from-[#FA5252] to-[#DD2476] ",
           {
             "text-white dark:text-white bg-gradient-to-r":
               nav.link == router.pathname,

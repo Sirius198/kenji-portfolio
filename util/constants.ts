@@ -1,0 +1,3 @@
+export const DEFAULT_REFETCH_ON_WINDOW_FOCUS_STALE_TIME = 5000 // 1 minute
+
+export const NEXT_PUBLIC_RESUME_URL = process.env.NEXT_PUBLIC_RESUME_URL

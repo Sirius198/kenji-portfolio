@@ -1,0 +1,56 @@
+export interface EducationType {
+  date: string;
+  certification: string;
+  school: string;
+  location: string;
+}
+
+export interface ExperienceType {
+  date: string;
+  company: string;
+  title: string;
+  description: string;
+  url: string;
+}
+
+export interface AwardType {
+  date: string;
+  title: string;
+  description: string;
+}
+
+export interface SkillType {
+  name: string;
+  proficient: number;
+}
+
+export interface WorkType {}
+
+export interface BlogType {}
+
+export interface ResumeDataType {
+  contact: {
+    firstName: string;
+    lastName: string;
+    titles: string[];
+    phone: string;
+    email: string;
+    location: string;
+    birthday: string;
+  };
+  socials: {
+    linkedin: string;
+    github: string;
+    behance: string;
+    leetcode: string;
+  };
+  resume: {
+    education: EducationType[];
+    experience: ExperienceType[];
+    awards: AwardType[];
+    skills: SkillType[];
+    knowledges: string[];
+  };
+  works: WorkType[];
+  blogs: BlogType[];
+}

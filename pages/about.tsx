@@ -4,8 +4,11 @@ import DateIcon from "../components/icons/about/DateIcon";
 import EmailIcon from "../components/icons/about/EmailIcon";
 import LocationIcon from "../components/icons/about/LocationIcon";
 import PhoneIcon from "../components/icons/about/PhoneIcon";
+import useResume from "../hooks/useResume";
 
 export default function AboutPage() {
+  const [cv] = useResume();
+
   const myService = [
     {
       title: "Ui/Ux Design",
@@ -47,8 +50,8 @@ export default function AboutPage() {
 
   const personalInfo = [
     { title: "phone" },
-    { title:"location" },
-    { title:"email" },
+    { title: "location" },
+    { title: "email" },
     { title: "" },
   ];
 
@@ -56,6 +59,7 @@ export default function AboutPage() {
     () =>
       myService.map((s) => (
         <div
+        key={s.image}
           className="about-box dark:bg-transparent"
           style={{ background: s.background }}
         >
@@ -90,8 +94,6 @@ export default function AboutPage() {
                   className="w-full md:w-[330px] md:h-[400px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
                   src="/images/about.jpg"
                   alt=""
-                  data-xblocker="passed"
-                  style={{ visibility: "visible" }}
                 />
               </div>
               <div className="col-span-12 md:col-span-8 space-y-2.5">
@@ -99,7 +101,7 @@ export default function AboutPage() {
                   <h3 className="text-4xl font-medium dark:text-white mb-2.5 ">
                     Who am i?
                   </h3>
-                  <p className="text-gray-lite  dark:text-color-910 leading-7">
+                  <p className="text-gray-lite dark:text-color-910 leading-7">
                     I'm Creative Director and UI/UX Designer from Sydney,
                     Australia, working in web development and print media. I
                     enjoy turning complex problems into simple, beautiful and
@@ -127,9 +129,9 @@ export default function AboutPage() {
                         <h6 className="font-medium dark:text-white">
                           <a
                             className="hover:text-[#FA5252] duration-300 transition"
-                            href="tel:+1234567890"
+                            href={`tel:${cv?.contact.phone}`}
                           >
-                            +123 456 7890
+                            {cv?.contact.phone}
                           </a>
                         </h6>
                       </div>
@@ -143,7 +145,7 @@ export default function AboutPage() {
                           Location
                         </p>
                         <h6 className="font-medium dark:text-white">
-                          Hong kong china
+                          {cv?.contact.location}
                         </h6>
                       </div>
                     </div>
@@ -158,9 +160,9 @@ export default function AboutPage() {
                         <h6 className="font-medium dark:text-white">
                           <a
                             className="hover:text-[#FA5252] duration-300 transition"
-                            href="mailto:ibthemes21@gmail.com"
+                            href={`mailto:${cv?.contact.email}`}
                           >
-                            example@mail.com
+                            {cv?.contact.email}
                           </a>
                         </h6>
                       </div>
@@ -174,7 +176,7 @@ export default function AboutPage() {
                           Birthday
                         </p>
                         <h6 className="font-medium dark:text-white">
-                          May 27, 1990
+                          {cv?.contact.birthday}
                         </h6>
                       </div>
                     </div>

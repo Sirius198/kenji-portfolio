@@ -4,9 +4,9 @@
     "lastName": "Fukuda",
     "titles": ["Full Stack Developer"],
     "phone": "+1 360 388 3068",
-    "email": "the",
-    "location": "",
-    "birthday": ""
+    "email": "thekenjifukuda@gmail.com",
+    "location": "Sapporo, Hokkaido, Japan",
+    "birthday": "Nov 18, 1996"
   },
   "socials": {
     "linkedin": "",
@@ -17,26 +17,40 @@
   "resume": {
     "education": [
       {
-        "date": "",
-        "certification": "",
-        "school": "",
+        "date": "2012-2016",
+        "certification": "Bachelor's degree in Computer Science",
+        "school": "Sapporo International University",
         "location": ""
       }
     ],
     "experience": [
       {
-        "date": "",
-        "company": "",
-        "title": "",
+        "date": "2012-2013",
+        "company": "Blue Interactive",
+        "title": "Blockchain Engineer",
+        "description": "",
+        "url": ""
+      },
+      {
+        "date": "2012-2013",
+        "company": "BHuman",
+        "title": "Backend Engineer",
+        "description": "",
+        "url": ""
+      },
+      {
+        "date": "2012-2013",
+        "company": "Sellsio",
+        "title": "Full Stack Developer",
         "description": "",
         "url": ""
       }
     ],
     "awards": [
       {
-        "date": "",
-        "title": "",
-        "description": ""
+        "date": "2015-2017",
+        "title": "Best Freelancer",
+        "description": "Upwork & Top Rated"
       }
     ],
     "skills": [
@@ -55,6 +69,14 @@
       {
         "name": "Vue.js",
         "proficient": 99
+      },
+      {
+        "name": "Go",
+        "proficient": 90
+      },
+      {
+        "name": "Rust",
+        "proficient": 60
       }
     ],
     "knowledges": ["Kafka", "Time Management"]
