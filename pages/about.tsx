@@ -60,7 +60,7 @@ export default function AboutPage() {
       myService.map((s) => (
         <div
         key={s.image}
-          className="about-box dark:bg-transparent"
+          className="about-box dark:bg-transparent!"
           style={{ background: s.background }}
         >
           <img

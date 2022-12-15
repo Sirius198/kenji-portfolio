@@ -9,12 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        810: "#f8fbfb",
+        "color-810": "#f8fbfb",
         "gray-lite": "#44566C",
         oriange: "#e93b81",
         "oriange-lite": "#FD7590",
         green: "#6AB5B9",
         "color-50": "#C17CEB",
+        "color-910": "#A6A6A6",
       },
       backgroundImage: {
         homeBg: "url('/images/bg.jpg')",

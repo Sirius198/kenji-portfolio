@@ -8,7 +8,7 @@ export default function ResumePage() {
   const [cv] = useResume();
 
   return (
-    <section className="bg-white  lg:rounded-2xl dark:bg-[#111111]">
+    <section className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <div data-aos="fade" className="aos-init aos-animate">
         <div className="container  sm:px-5 md:px-10 lg:px-20">
           <div className="py-12 px-4">
@@ -27,8 +27,7 @@ export default function ResumePage() {
                 {cv?.resume.education.map((edu) => (
                   <div
                     key={edu.school}
-                    className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2"
-                    style={{ background: "rgb(255, 244, 244)" }}
+                    className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2 bg-[#fff4f4] dark:bg-transparent"
                   >
                     <span className="text-tiny text-gray-lite dark:text-[#b7b7b7]">
                       {edu.date}
@@ -52,8 +51,7 @@ export default function ResumePage() {
                 {cv?.resume.experience.map((exp) => (
                   <div
                     key={exp.company}
-                    className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-[#212425] dark:border-2"
-                    style={{ background: "rgb(238, 245, 250)" }}
+                    className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2 bg-[#eef5fa] dark:bg-transparent"
                   >
                     <span className="text-tiny text-gray-lite dark:text-[#b7b7b7]">
                       {exp.date}
@@ -75,8 +73,7 @@ export default function ResumePage() {
                 {cv?.resume.awards.map((award) => (
                   <div
                     key={award.title}
-                    className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-[#212425] dark:border-2"
-                    style={{ background: "rgb(252, 249, 242)" }}
+                    className="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg  dark:border-[#212425] dark:border-2 bg-[#fcfaf2] dark:bg-transparent"
                   >
                     <span className="text-tiny text-gray-lite dark:text-[#b7b7b7]">
                       {award.date}

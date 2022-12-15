@@ -9,27 +9,56 @@ import GithubIcon from "../components/icons/home/GithubIcon";
 import LeetcodeIcon from "../components/icons/home/LeetcodeIcon";
 import BehanceIcon from "../components/icons/home/BehanceIcon";
 
-
 export default function Home() {
   const [cv] = useResume();
+  const [strAdvice] = useFreeAdvice();
 
   const socials = [
-    { icon: <LinkedinIcon />, url: cv?.socials.linkedin, color: "text-[#0072b1]" },
-    { icon: <GithubIcon />, url: cv?.socials.github, color: "text-[#0072b1]" },
-    { icon: <LeetcodeIcon />, url: cv?.socials.leetcode, color: "text-[#003521]" },
-    { icon: <BehanceIcon />, url: cv?.socials.behance, color: "text-[#1769ff]" },
+    {
+      icon: <LinkedinIcon />,
+      url: cv?.socials.linkedin || "1",
+      color: "text-[#0072b1]",
+    },
+    {
+      icon: <GithubIcon />,
+      url: cv?.socials.github || "2",
+      color: "text-[#0072b1]",
+    },
+    {
+      icon: <LeetcodeIcon />,
+      url: cv?.socials.leetcode || "3",
+      color: "text-[#003521]",
+    },
+    {
+      icon: <BehanceIcon />,
+      url: cv?.socials.behance || "4",
+      color: "text-[#1769ff]",
+    },
   ];
 
   const socialsRenderer = useMemo(
     () =>
       socials.map((s) => (
-        <a href={s.url} target="_blank" rel="noopener noreferrer" key={s.url}>
+        <Link
+          href={s.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          key={s.url}
+        >
           <span className={`socialbtn ${s.color}`}>{s.icon}</span>
-        </a>
+        </Link>
       )),
     [socials]
   );
-  const [strAdvice] = useFreeAdvice()
+
+  const adviceRenderer = useMemo(
+    () => (
+      <h5 className="max-w-[250px] mx-auto text-center text-gray-lite dark:text-color-910 text-[#7B7B7B]/50 mt-2 italic">
+        "{strAdvice}"
+      </h5>
+    ),
+    [strAdvice]
+  );
 
   return (
     <div
@@ -54,9 +83,7 @@ export default function Home() {
         {/* <Image src="" alt="icon" className="mr-2" /> */}
         Download CV
       </a>
-      <h5 className="max-w-[250px] mx-auto text-center text-gray-lite dark:text-color-910 text-[#7B7B7B]/50 mt-2 italic">
-        "{strAdvice}"
-      </h5>
+      {/* {adviceRenderer} */}
     </div>
   );
 }
