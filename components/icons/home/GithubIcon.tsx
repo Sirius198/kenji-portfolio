@@ -1,4 +1,4 @@
-export default function () {
+export default function GithubIcon() {
   return (
     <svg
       fill="#000000"

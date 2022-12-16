@@ -95,7 +95,7 @@ export default function AboutPage() {
                     Who am i?
                   </h3>
                   <p className="text-gray-lite dark:text-color-910 leading-7">
-                    I'm Creative Director and UI/UX Designer from Sydney,
+                    I&apos;m Creative Director and UI/UX Designer from Sydney,
                     Australia, working in web development and print media. I
                     enjoy turning complex problems into simple, beautiful and
                     intuitive designs.

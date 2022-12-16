@@ -1,4 +1,4 @@
-export default function () {
+export default function ResumeIcon() {
   return (
     <svg
       stroke="currentColor"

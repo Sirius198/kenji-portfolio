@@ -1,4 +1,4 @@
-export default function () {
+export default function ExperienceIcon() {
   return (
     <svg
       stroke="currentColor"

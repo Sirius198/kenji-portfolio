@@ -54,7 +54,7 @@ export default function Home() {
   const adviceRenderer = useMemo(
     () => (
       <h5 className="max-w-[250px] mx-auto text-center text-gray-lite dark:text-color-910 text-[#7B7B7B]/50 mt-2 italic">
-        "{strAdvice}"
+        &apos;{strAdvice}&apos;
       </h5>
     ),
     [strAdvice]

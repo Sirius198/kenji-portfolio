@@ -15,7 +15,7 @@ import LightIcon from "../icons/header/LightIcon";
 import ResumeIcon from "../icons/header/ResumeIcon";
 import WorkIcon from "../icons/header/WorkIcon";
 
-export default function () {
+export default function Header() {
   const router = useRouter();
   const [theme, toggleTheme] = useRecoilState(themeState);
   const [showMenu, setShowMenu] = useState(false);
@@ -99,7 +99,7 @@ export default function () {
     <header className="flex justify-between items-center fixed top-0 left-0 w-full lg:static z-[1111111111]">
       <div className="flex justify-between w-full px-4 lg:px-0 bg-[#F3F6F6] lg:bg-transparent lg:dark:bg-transparent dark:bg-black">
         <div className="flex justify-between w-full items-center space-x-4 lg:my-8 my-5 ">
-          <a className="text-5xl font-semibold" href="/"></a>
+          <Link className="text-5xl font-semibold" href="/"></Link>
           <div className="flex items-center">
             <span
               onClick={() => toggleTheme(!theme)}

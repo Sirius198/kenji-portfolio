@@ -1,4 +1,4 @@
-export default function () {
+export default function LinkedinIcon() {
   return (
     <svg
       stroke="currentColor"

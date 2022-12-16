@@ -1,4 +1,4 @@
-export default function () {
+export default function LightIcon() {
   return (
     <svg
       stroke="currentColor"
