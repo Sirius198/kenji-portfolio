@@ -24,7 +24,12 @@ export interface SkillType {
   proficient: number;
 }
 
-export interface WorkType {}
+export interface WorkType {
+  name: string;
+  image_url: string;
+  git_url: string;
+  live_url: string;
+}
 
 export interface BlogType {}
 

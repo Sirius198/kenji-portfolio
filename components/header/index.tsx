@@ -2,6 +2,8 @@ import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
+import { useRecoilState } from "recoil";
+import { themeState } from "../../state/atoms/themeAtom";
 import AboutIcon from "../icons/header/AboutIcon";
 import BlogIcon from "../icons/header/BlogIcon";
 import CloseIcon from "../icons/header/CloseIcon";
@@ -15,7 +17,7 @@ import WorkIcon from "../icons/header/WorkIcon";
 
 export default function () {
   const router = useRouter();
-  const [theme, toggleTheme] = useState(false);
+  const [theme, toggleTheme] = useRecoilState(themeState);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {

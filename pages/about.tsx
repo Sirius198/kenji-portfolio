@@ -13,46 +13,39 @@ export default function AboutPage() {
     {
       title: "Ui/Ux Design",
       desc: "",
-      background: "rgb(252, 244, 255)",
+      background: "bg-[#FCF4FF]",
       image: "/images/about/icon-1.svg",
     },
     {
       title: "App Development",
       desc: "",
-      background: "rgb(254, 250, 240)",
+      background: "bg-[#FEFAF0]",
       image: "/images/about/icon-2.svg",
-    },
-    {
-      title: "Photography",
-      desc: "",
-      background: "rgb(252, 244, 255)",
-      image: "/images/about/icon-3.svg",
-    },
-    {
-      title: "Photography",
-      desc: "",
-      background: "rgb(255, 244, 244)",
-      image: "/images/about/icon-4.svg",
-    },
-    {
-      title: "Managment",
-      desc: "",
-      background: "rgb(255, 240, 248)",
-      image: "/images/about/icon-5.svg",
     },
     {
       title: "Web Development",
       desc: "",
-      background: "rgb(243, 250, 255)",
+      background: "bg-[#FCF4FF]",
+      image: "/images/about/icon-3.svg",
+    },
+    {
+      title: "SEO",
+      desc: "",
+      background: "bg-[#FFF4F4]",
+      image: "/images/about/icon-4.svg",
+    },
+    {
+      title: "Blockchain Development",
+      desc: "",
+      background: "bg-[#FFF0F8]",
+      image: "/images/about/icon-5.svg",
+    },
+    {
+      title: "DevOps",
+      desc: "",
+      background: "bg-[#F3FAFF]",
       image: "/images/about/icon-6.svg",
     },
-  ];
-
-  const personalInfo = [
-    { title: "phone" },
-    { title: "location" },
-    { title: "email" },
-    { title: "" },
   ];
 
   const serviceRenderer = useMemo(
@@ -60,8 +53,8 @@ export default function AboutPage() {
       myService.map((s) => (
         <div
         key={s.image}
-          className="about-box dark:bg-transparent!"
-          style={{ background: s.background }}
+          className={`about-box dark:bg-transparent ${s.background}`}
+          // style={{ background: s.background }}
         >
           <img
             className="w-10 h-10 object-contain  block"

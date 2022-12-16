@@ -81,6 +81,31 @@
     ],
     "knowledges": ["Kafka", "Time Management"]
   },
-  "works": [],
+  "works": [
+    {
+      "name": "BHuman",
+      "image_url": "/images/portfolios/bhuman.png",
+      "git_url": "",
+      "live_url": ""
+    },
+    {
+      "name": "Corva",
+      "image_url": "/images/portfolios/Corva.png",
+      "git_url": "",
+      "live_url": ""
+    },
+    {
+      "name": "iMentor",
+      "image_url": "/images/portfolios/iMentor.png",
+      "git_url": "",
+      "live_url": ""
+    },
+    {
+      "name": "NoExam",
+      "image_url": "/images/portfolios/noexam.png",
+      "git_url": "",
+      "live_url": ""
+    }
+  ],
   "blogs": []
 }
