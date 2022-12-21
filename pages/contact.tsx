@@ -1,8 +1,12 @@
 import React, { useRef } from "react";
 import Footer from "../components/footer";
 import useResume from "../hooks/useResume";
-import emailjs from '@emailjs/browser';
-import { NEXT_EMAILJS_PUBLIC_KEY, NEXT_EMAILJS_SERVICE, NEXT_EMAILJS_TEMPLATE } from "../util/constants";
+import emailjs from "@emailjs/browser";
+import {
+  NEXT_EMAILJS_PUBLIC_KEY,
+  NEXT_EMAILJS_SERVICE,
+  NEXT_EMAILJS_TEMPLATE,
+} from "../util/constants";
 
 export default function ContactPage() {
   const [cv] = useResume();
@@ -38,16 +42,27 @@ export default function ContactPage() {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // send mail
-    console.log(NEXT_EMAILJS_PUBLIC_KEY, NEXT_EMAILJS_TEMPLATE)
+    console.log(NEXT_EMAILJS_PUBLIC_KEY, NEXT_EMAILJS_TEMPLATE);
 
-    emailjs.sendForm('service_kenji_fukuda', 'template_wis22z7', form.current!, 'ly0iXt34uNgVpKreV')
-     .then((result:any) => {
-         // show the user a success message
-         console.log(result)
-     }, (error:any) => {
-         // show the user an error
-         console.error(error)
-     });
+    emailjs
+      .sendForm(
+        "service_kenji_fukuda",
+        "template_wis22z7",
+        form.current!,
+        "ly0iXt34uNgVpKreV"
+      )
+      .then(
+        (result: any) => {
+          // show the user a success message
+          alert("Thanks");
+          console.log(result);
+        },
+        (error: any) => {
+          // show the user an error
+          console.error(error);
+          alert("Failed to send message");
+        }
+      );
   };
 
   return (

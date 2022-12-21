@@ -129,9 +129,10 @@
   ],
   "blogs": [
     {
-      "name": "How to ",
-      "image_url": "/images/blogs/1.webp",
-      "live_url": "https://medium.com/"
+      "name": "Tutorial: Learn microservice architecture by building ecommerce app",
+      "image_url": "/images/blogs/service-oriented-architecture.jpg",
+      "live_url": "https://medium.com/",
+      "status": "Coming Soon..."
     }
   ]
 }

@@ -35,6 +35,7 @@ export interface BlogType {
   name: string;
   image_url: string;
   live_url: string;
+  status: string;
 }
 
 export interface ResumeDataType {
