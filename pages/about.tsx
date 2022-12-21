@@ -52,7 +52,7 @@ export default function AboutPage() {
     () =>
       myService.map((s) => (
         <div
-        key={s.image}
+          key={s.image}
           className={`about-box dark:bg-transparent ${s.background}`}
           // style={{ background: s.background }}
         >
@@ -94,17 +94,14 @@ export default function AboutPage() {
                   <h3 className="text-4xl font-medium dark:text-white mb-2.5 ">
                     Who am i?
                   </h3>
-                  <p className="text-gray-lite dark:text-color-910 leading-7">
-                    I&apos;m Creative Director and UI/UX Designer from Sydney,
-                    Australia, working in web development and print media. I
-                    enjoy turning complex problems into simple, beautiful and
-                    intuitive designs.
-                  </p>
-                  <p className="text-gray-lite leading-7 mt-2.5 dark:text-color-910">
-                    My aim is to bring across your message and identity in the
-                    most creative way. I created web design for many famous
-                    brand companies.
-                  </p>
+                  {cv?.whoami.map((txt, index) => (
+                    <p
+                      className="text-gray-lite leading-7 mt-2.5 dark:text-color-910"
+                      key={index}
+                    >
+                      {txt}
+                    </p>
+                  ))}
                 </div>
                 <div>
                   <h3 className="text-4xl font-medium my-5 dark:text-white">

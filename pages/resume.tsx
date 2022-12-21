@@ -10,7 +10,7 @@ export default function ResumePage() {
   return (
     <section className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <div data-aos="fade" className="aos-init aos-animate">
-        <div className="container  sm:px-5 md:px-10 lg:px-20">
+        <div className="container sm:px-5 md:px-10 lg:px-20">
           <div className="py-12 px-4">
             <h2 className="after-effect after:left-44 mb-[40px] mt-12 lg:mt-0">
               Resume
@@ -87,7 +87,7 @@ export default function ResumePage() {
           </div>
         </div>
         <div className="container bg-color-810 dark:bg-[#0D0D0D] py-12 px-4 sm:px-5 md:px-10 lg:px-20">
-          <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="col-span-1">
               <h4 className="text-5xl dark:text-white font-medium mb-6">
                 Working Skills
@@ -112,10 +112,22 @@ export default function ResumePage() {
               ))}
             </div>
             <div className="col-span-1">
+
+              <h4 className="text-5xl dark:text-white font-medium mb-8">
+                Soft skills
+              </h4>
+              <div className="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap mb-8">
+                {cv?.resume.soft_skills.map((kl) => (
+                  <button className="resume-btn" key={kl}>
+                    {kl}
+                  </button>
+                ))}
+              </div>
+              
               <h4 className="text-5xl dark:text-white font-medium mb-8">
                 Knowledges
               </h4>
-              <div className="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap">
+              <div className="flex gap-x-3 gap-y-3 md:gap-y-6 md:gap-x-4 flex-wrap mb-8">
                 {cv?.resume.knowledges.map((kl) => (
                   <button className="resume-btn" key={kl}>
                     {kl}

@@ -31,7 +31,11 @@ export interface WorkType {
   live_url: string;
 }
 
-export interface BlogType {}
+export interface BlogType {
+  name: string;
+  image_url: string;
+  live_url: string;
+}
 
 export interface ResumeDataType {
   contact: {
@@ -43,6 +47,7 @@ export interface ResumeDataType {
     location: string;
     birthday: string;
   };
+  whoami: string[];
   socials: {
     linkedin: string;
     github: string;
@@ -55,6 +60,7 @@ export interface ResumeDataType {
     awards: AwardType[];
     skills: SkillType[];
     knowledges: string[];
+    soft_skills: string[];
   };
   works: WorkType[];
   blogs: BlogType[];

@@ -14,6 +14,11 @@
     "behance": "",
     "leetcode": "https://leetcode.com/kenjifukuda"
   },
+  "whoami": [
+    "I'm Creative Web Developer from Hokkaido, Japan, working in web development and blockchain. I enjoy turning complex problems into simple, beautiful and intuitive designs.",
+    "My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.",
+    "I love volleyball"
+  ],
   "resume": {
     "education": [
       {
@@ -60,15 +65,15 @@
       },
       {
         "name": "TypeScript",
-        "proficient": 99
+        "proficient": 85
       },
       {
         "name": "React",
-        "proficient": 99
+        "proficient": 95
       },
       {
         "name": "Vue.js",
-        "proficient": 99
+        "proficient": 90
       },
       {
         "name": "Go",
@@ -76,36 +81,55 @@
       },
       {
         "name": "Rust",
-        "proficient": 60
+        "proficient": 70
       }
     ],
-    "knowledges": ["Kafka", "Time Management"]
+    "knowledges": ["Next.js", "Nuxt.js", "TailwindCSS", "Cosmos SDK", "Docker", "Nginx", "Kafka"],
+    "soft_skills": ["Self Learning", "Problem solving", "Teamwork", "Time Management"]
   },
   "works": [
     {
-      "name": "BHuman",
-      "image_url": "/images/portfolios/bhuman.png",
+      "name": "MUN Blockchain",
+      "image_url": "/images/portfolios/mun.png",
       "git_url": "",
-      "live_url": ""
+      "live_url": "https://mun.money"
     },
     {
       "name": "Corva",
       "image_url": "/images/portfolios/Corva.png",
       "git_url": "",
-      "live_url": ""
+      "live_url": "https://corva.ai"
+    },
+    {
+      "name": "Sellsio",
+      "image_url": "/images/portfolios/sellsio.png",
+      "git_url": "",
+      "live_url": "https://sellsio.co"
+    },
+    {
+      "name": "BHuman",
+      "image_url": "/images/portfolios/bhuman.png",
+      "git_url": "",
+      "live_url": "https://bhuman.ai"
     },
     {
       "name": "iMentor",
       "image_url": "/images/portfolios/iMentor.png",
       "git_url": "",
-      "live_url": ""
+      "live_url": "https://imentor.org"
     },
     {
       "name": "NoExam",
       "image_url": "/images/portfolios/noexam.png",
       "git_url": "",
-      "live_url": ""
+      "live_url": "https://noexam.com"
     }
   ],
-  "blogs": []
+  "blogs": [
+    {
+      "name": "How to ",
+      "image_url": "/images/blogs/1.webp",
+      "live_url": "https://medium.com/"
+    }
+  ]
 }
