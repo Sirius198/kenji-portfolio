@@ -6,7 +6,7 @@ import { NEXT_EMAILJS_PUBLIC_KEY, NEXT_EMAILJS_SERVICE, NEXT_EMAILJS_TEMPLATE } 
 
 export default function ContactPage() {
   const [cv] = useResume();
-  const form = useRef<HTMLFormElement>();
+  const form = useRef<HTMLFormElement>(null);
 
   const contacts = [
     {
