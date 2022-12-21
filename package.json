@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@kodingdotninja/use-tailwind-breakpoint": "^0.0.5",
     "@types/node": "18.11.12",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
     "classnames": "^2.3.2",
+    "email-js": "^2.0.2",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "next": "13.0.6",

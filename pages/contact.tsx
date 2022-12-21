@@ -1,6 +1,55 @@
+import React, { useRef } from "react";
 import Footer from "../components/footer";
+import useResume from "../hooks/useResume";
+import emailjs from '@emailjs/browser';
+import { NEXT_EMAILJS_PUBLIC_KEY, NEXT_EMAILJS_SERVICE, NEXT_EMAILJS_TEMPLATE } from "../util/constants";
 
 export default function ContactPage() {
+  const [cv] = useResume();
+  const form = useRef<HTMLFormElement>();
+
+  const contacts = [
+    {
+      icon: "/images/contact/phone.png",
+      bgColor: "",
+      title: "Phone",
+      content: [cv?.contact.phone],
+    },
+    {
+      icon: "/images/contact/email.png",
+      bgColor: "",
+      title: "Email",
+      content: [cv?.contact.email],
+    },
+    {
+      icon: "/images/contact/telegram.png",
+      bgColor: "",
+      title: "Telegram",
+      content: [cv?.contact.telegram],
+    },
+    {
+      icon: "/images/contact/address.png",
+      bgColor: "",
+      title: "Address",
+      content: [cv?.contact.location],
+    },
+  ];
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // send mail
+    console.log(NEXT_EMAILJS_PUBLIC_KEY, NEXT_EMAILJS_TEMPLATE)
+
+    emailjs.sendForm('service_kenji_fukuda', 'template_wis22z7', form.current!, 'ly0iXt34uNgVpKreV')
+     .then((result:any) => {
+         // show the user a success message
+         console.log(result)
+     }, (error:any) => {
+         // show the user an error
+         console.error(error)
+     });
+  };
+
   return (
     <section className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <div data-aos="fade" className="aos-init aos-animate">
@@ -11,66 +60,33 @@ export default function ContactPage() {
             </h2>
             <div className="lg:flex gap-x-20">
               <div className="w-full lg:w-[40%] xl:w-[30%] space-y-6">
-                <div
-                  className="flex flex-wrap bg-[#FCF4FF] dark:bg-[#212425] p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
-                >
-                  <span className="w-8 mt-2">
-                    <img
-                      src="/images/contact/phone.png"
-                      alt="icon"
-                      className="text-4xl dark:text-white"
-                    />
-                  </span>
-                  <div className="space-y-2">
-                    <p className="text-xl font-semibold dark:text-white">
-                      Phone :
-                    </p>
-                    <p className="text-gray-lite text-lg dark:text-[#A6A6A6] ">
-                      +452 666 386
-                    </p>
+                {contacts.map((c, i) => (
+                  <div
+                    className="flex flex-wrap bg-[#FCF4FF] dark:bg-[#212425] p-[25px]  border-[#A6A6A6] gap-2 rounded-xl "
+                    key={i}
+                  >
+                    <span className="w-8 mt-2">
+                      <img
+                        src={c.icon}
+                        alt="icon"
+                        className="text-4xl dark:text-white"
+                      />
+                    </span>
+                    <div className="space-y-2">
+                      <p className="text-xl font-semibold dark:text-white">
+                        {c.title} :
+                      </p>
+                      {c.content.map((value) => (
+                        <p
+                          className="text-gray-lite text-lg dark:text-[#A6A6A6]"
+                          key={value}
+                        >
+                          {value}
+                        </p>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                <div
-                  className="flex flex-wrap bg-[#EEFBFF] dark:bg-[#212425] p-[30px] border-[#A6A6A6] gap-2 rounded-xl"
-                >
-                  <span className="w-8 mt-2">
-                    <img
-                      src="/images/contact/email.png"
-                      alt="icon"
-                      className="text-4xl dark:text-white"
-                    />
-                  </span>
-                  <div className="space-y-2">
-                    <p className="text-xl font-semibold dark:text-white">
-                      Email :
-                    </p>
-                    <p className="text-gray-lite text-lg dark:text-[#A6A6A6] ">
-                      support@gmail.com
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="flex flex-wrap bg-[#F2F4FF] dark:bg-[#212425] p-[30px]  border-[#A6A6A6] gap-2 rounded-xl"
-                >
-                  <span className="w-8 mt-2">
-                    <img
-                      src="/images/contact/address.png"
-                      alt="icon"
-                      className="text-4xl dark:text-white"
-                    />
-                  </span>
-                  <div className="space-y-2">
-                    <p className="text-xl font-semibold dark:text-white">
-                      Address :
-                    </p>
-                    <p className="text-gray-lite text-lg dark:text-[#A6A6A6] ">
-                      Maount View, Oval
-                    </p>
-                    <p className="text-gray-lite text-lg dark:text-[#A6A6A6] ">
-                      Road, New York, USA
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="w-full mt-8 lg:mt-0 lg:w-[60%] xl:w-[70%]">
                 <div
@@ -83,10 +99,10 @@ export default function ContactPage() {
                     </span>
                     <br />
                     <span className="font-semibold dark:text-white">
-                      design work or partnerships.
+                      development or partnerships.
                     </span>
                   </h3>
-                  <form id="myForm">
+                  <form onSubmit={onSubmit} ref={form}>
                     <div className="relative  z-0 w-full mt-[40px] mb-8 group">
                       <input
                         type="text"
@@ -137,7 +153,7 @@ export default function ContactPage() {
                     <div className="transition-all duration-300  ease-in-out inline-block hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] rounded-lg  mt-3">
                       <input
                         type="submit"
-                        className=" transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white   dark:text-white "
+                        className="transition ease-in duration-200 font-semibold cursor-pointer border-color-910   hover:border-transparent px-6  py-2 rounded-lg border-[2px]  hover:text-white   dark:text-white "
                         value="Submit"
                       />
                     </div>

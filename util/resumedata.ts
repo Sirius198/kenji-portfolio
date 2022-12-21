@@ -44,6 +44,8 @@ export interface ResumeDataType {
     titles: string[];
     phone: string;
     email: string;
+    telegram: string;
+    discord: string;
     location: string;
     birthday: string;
   };
