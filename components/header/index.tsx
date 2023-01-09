@@ -17,7 +17,8 @@ import WorkIcon from "../icons/header/WorkIcon";
 
 export default function Header() {
   const router = useRouter();
-  const [theme, toggleTheme] = useRecoilState(themeState);
+  const [theme, toggleTheme] = useState<boolean>(false);
+  // const [theme, toggleTheme] = useRecoilState(themeState);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
